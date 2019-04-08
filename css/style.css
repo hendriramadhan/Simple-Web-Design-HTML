@@ -1,0 +1,492 @@
+body {
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+#header {
+  background-color: #3a2737;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% 65%;
+      grid-template-columns: 35% 65%;
+      grid-template-areas: 'header menu';
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #header {
+    display: block;
+  }
+}
+
+#header header {
+  padding: 10px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  text-align: left;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 1em;
+}
+
+@media (max-width: 768px) {
+  #header header {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+#header header a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+#header nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: menu;
+  text-align: right;
+  margin: 1em;
+}
+
+@media (max-width: 768px) {
+  #header nav {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #header nav ul {
+    display: none;
+    width: 100%;
+  }
+}
+
+#header nav ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 0 40px 0 40px;
+}
+
+@media (max-width: 768px) {
+  #header nav ul li {
+    display: block;
+    text-align: center;
+    padding: 20px 50px 20px 0;
+  }
+}
+
+#header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+#header nav ul li :hover {
+  color: chocolate;
+}
+
+#header nav .toggle {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #642b69;
+  text-align: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #header nav .toggle {
+    display: block;
+  }
+  #header nav .toggle .teks-menu {
+    float: left;
+  }
+}
+
+@media (max-width: 768px) {
+  #header nav .active {
+    display: block;
+    margin: 0;
+  }
+}
+
+main section {
+  height: 100vh;
+}
+
+main section#section1 {
+  padding: 3em;
+  height: calc(100vh - 3em);
+  background: #1b2d44;
+  overflow: hidden;
+  position: relative;
+}
+
+main section#section1 h2 {
+  font-size: 3em;
+  margin: 5% 0 0 0;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  main section#section1 h2 {
+    font-size: 2.5em;
+    margin: 11% 0 0 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  main section#section1 h2 {
+    font-size: 2em;
+    margin: 25% 0 0 0;
+  }
+}
+
+@media (max-width: 425px) {
+  main section#section1 h2 {
+    margin: 45% 0 0 0;
+  }
+}
+
+@media (max-width: 320px) {
+  main section#section1 h2 {
+    margin: 55% 0 0 0;
+  }
+}
+
+main section#section1 .teks {
+  position: relative;
+  top: 0%;
+  left: 10%;
+}
+
+@media (max-width: 768px) {
+  main section#section1 .teks {
+    top: 0%;
+    left: 0%;
+  }
+}
+
+main section#section1 .teks #iconteks {
+  width: 25%;
+  float: left;
+  position: absolute;
+  margin: 4% 0 0 0;
+}
+
+@media (max-width: 1024px) {
+  main section#section1 .teks #iconteks {
+    width: 30%;
+    left: 0%;
+    position: absolute;
+    margin: 4% 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  main section#section1 .teks #iconteks {
+    width: 35%;
+    left: 0%;
+    position: absolute;
+    margin: 7% 0 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  main section#section1 .teks #iconteks {
+    width: 50%;
+    left: 26%;
+    position: absolute;
+    margin: 10% 0 0 0;
+  }
+}
+
+main section#section1 .teks p {
+  margin: 0;
+  font-size: 25px;
+  position: absolute;
+  padding: 13% 15% 0 36%;
+}
+
+@media (max-width: 1024px) {
+  main section#section1 .teks p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  main section#section1 .teks p {
+    font-size: 15px;
+    padding: 21% 0% 0 41%;
+  }
+}
+
+@media (max-width: 600px) {
+  main section#section1 .teks p {
+    font-size: 15px;
+    padding: 81% 0% 0 0%;
+    text-align: center;
+  }
+}
+
+main section#section2 {
+  padding: 3em;
+  height: calc(100vh - 3em);
+  background: #79460c;
+  overflow: hidden;
+  position: relative;
+}
+
+main section#section2 h2 {
+  font-size: 3em;
+  margin: 5% 0 0 0;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  main section#section2 h2 {
+    font-size: 2.5em;
+    margin: 11% 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  main section#section2 h2 {
+    font-size: 2em;
+    margin: 25% 0 0 0;
+  }
+}
+
+@media (max-width: 425px) {
+  main section#section2 h2 {
+    margin: 45% 0 0 0;
+  }
+}
+
+@media (max-width: 320px) {
+  main section#section2 h2 {
+    margin: 55% 0 0 0;
+  }
+}
+
+main section#section2 .teks {
+  position: relative;
+  top: 0;
+  left: 10%;
+}
+
+@media (max-width: 768px) {
+  main section#section2 .teks {
+    top: 0%;
+    left: 0%;
+  }
+}
+
+main section#section2 .teks .kepala {
+  width: 30%;
+  float: left;
+  position: absolute;
+  margin: 4% 0% 0 0;
+  left: -1%;
+}
+
+@media (max-width: 768px) {
+  main section#section2 .teks .kepala {
+    left: -2%;
+  }
+}
+
+@media (max-width: 425px) {
+  main section#section2 .teks .kepala {
+    width: 60%;
+    left: 18%;
+    position: absolute;
+    margin: 10% 0 0 0;
+  }
+}
+
+main section#section2 .teks #dalam1 {
+  width: 13%;
+  left: 8%;
+  margin: 6% 0 0 0;
+  position: absolute;
+}
+
+@media (max-width: 425px) {
+  main section#section2 .teks #dalam1 {
+    width: 20%;
+    left: 36%;
+    margin: 15% 0 0 0;
+    position: absolute;
+  }
+}
+
+main section#section2 .teks #dalam2 {
+  width: 7%;
+  left: 19.5%;
+  margin: 12% 0 0 0%;
+  position: absolute;
+}
+
+@media (max-width: 425px) {
+  main section#section2 .teks #dalam2 {
+    width: 13%;
+    left: 54.5%;
+    margin: 22% 0 0 0%;
+    position: absolute;
+  }
+}
+
+main section#section2 .teks p {
+  margin: 0;
+  font-size: 25px;
+  position: absolute;
+  padding: 13% 15% 0 36%;
+}
+
+@media (max-width: 1024px) {
+  main section#section2 .teks p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  main section#section2 .teks p {
+    font-size: 15px;
+    padding: 21% 0% 0 41%;
+  }
+}
+
+@media (max-width: 425px) {
+  main section#section2 .teks p {
+    font-size: 15px;
+    padding: 94% 0% 0 0%;
+    text-align: center;
+  }
+}
+
+main section#section3 {
+  padding: 2em;
+  height: calc(100vh - 3em);
+  background: #1c441b;
+  overflow: hidden;
+  position: relative;
+}
+
+main section#section3 h2 {
+  font-size: 3em;
+  margin: 5% 0 0 0;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  main section#section3 h2 {
+    font-size: 2.5em;
+    margin: 11% 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  main section#section3 h2 {
+    font-size: 2em;
+    margin: 25% 0 0 0;
+  }
+}
+
+@media (max-width: 425px) {
+  main section#section3 h2 {
+    margin: 45% 0 0 0;
+  }
+}
+
+@media (max-width: 320px) {
+  main section#section3 h2 {
+    margin: 55% 0 0 0;
+  }
+}
+
+main section#section3 .teks {
+  position: relative;
+  top: 0;
+  left: 10%;
+}
+
+@media (max-width: 768px) {
+  main section#section3 .teks {
+    top: 0%;
+    left: 0%;
+  }
+}
+
+main section#section3 .teks #foto {
+  width: 30%;
+  float: left;
+  position: absolute;
+  margin: 4% 0 0 0;
+  border-radius: 50%;
+  border: #fff solid 20px;
+}
+
+@media (max-width: 1024px) {
+  main section#section3 .teks #foto {
+    border: #fff solid 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  main section#section3 .teks #foto {
+    width: 50%;
+    left: 22%;
+    position: absolute;
+    margin: 15% 0 0 0;
+  }
+}
+
+main section#section3 .teks p {
+  margin: 0;
+  font-size: 25px;
+  position: absolute;
+  padding: 17% 0 0 39%;
+}
+
+@media (max-width: 1024px) {
+  main section#section3 .teks p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  main section#section3 .teks p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  main section#section3 .teks p {
+    font-size: 15px;
+    padding: 90% 0% 0px 10%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  main section#section3 .teks p {
+    padding: 90% 0% 0px 5%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

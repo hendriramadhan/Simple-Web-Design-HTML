@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Design</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"  crossorigin="anonymous">
+</head>
+<body>
+    <div id="header">
+        <header>
+            <a href="./index.html">Simple Design</a>
+        </header>
+
+        <nav>
+            <div class="toggle menu">
+               <span class="teks-menu">Menu</span><i class="fas fa-bars"></i>
+            </div>
+             <ul>
+                <li>
+                    <a href="#section1">Intro</a>
+                </li>
+                <li>
+                    <a href="#section2">Animasi</a>
+                </li>
+                <li>
+                    <a href="#section3">About</a>
+                </li>
+            </ul>
+        </nav>
+            
+    </div>
+
+    <main>
+        <section id="section1">
+            <h2>Intro</h2>
+            <div class="teks">
+                <img src="images/file.png" alt="file" id="iconteks" class="lax" data-lax-preset="zoomInOut">
+                <p class="lax" data-lax-preset="fadeInOut">Untuk membuat desain ini saya tidak menggunakan framework apapun. Untuk animasinya saya menggunakan lax.js. Animasinya akan berfungsi apabila kita scroll layar dari awal sampai akhir.</p>
+            </div>
+        </section>
+
+        <section id="section2">
+            <h2>Animasi</h2>
+            <div class="teks">
+                <img src="images/kepala.png" alt="Kepala" class="kepala">
+                <img src="images/cog.png" alt="cog" id="dalam1" class="lax" data-lax-preset="spin-100">
+                <img src="images/cog.png" alt="cog" id="dalam2" class="lax" data-lax-preset="spinRev">
+                <p>Di gambar gear, saya sengaja memasukan efek spin agar lebih menarik</p>
+
+            </div>
+
+        </section>
+
+        <section id="section3">
+            <h2>About</h2>
+            <div class="teks">
+                <img src="images/HENDRI-RAMADHAN.png" alt="Hendri Ramadhan" id="foto" class="lax" data-lax-preset="zoomInOut blurInOut">
+                <p class="lax" data-lax-preset="driftLeft fadeInOut"> Created by Hendri Ramadhan</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu').click(function(){
+                $('ul').toggleClass('active');
+            })
+        })
+    </script>
+
+    <script src="node_modules/lax.js/lib/lax.min.js"></script>
+    <script>
+    window.onload =function(){
+        lax.setup()
+
+        document.addEventListener('scroll',function(e){
+            lax.update(window.scrollY)
+        }, false)
+    }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+        
+            if (this.hash !== "") {
+              event.preventDefault();
+        
+              var hash = this.hash;
+        
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                window.location.hash = hash;
+              });
+            } 
+          });
+        });
+    </script>
+</body>
+</html>
